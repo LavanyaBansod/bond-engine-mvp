@@ -1,0 +1,16 @@
+# Python temporary files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+venv/
+env/
+.env
+
+# Databases (We don't upload the actual data, just the code!)
+*.db
+*.sqlite3
+
+# OS stuff
+.DS_Store
