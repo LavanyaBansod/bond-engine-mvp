@@ -51,13 +51,14 @@ To run this project locally, you will need to open three separate terminals and 
    ```
 
 2. **Start the Django Store:**
-  ```bash
-  python manage.py runserver
-  ```
+   ```bash
+   cd django_ecommerce_mod5
+   python manage.py runserver
+   ```
 3. Start the Streamlit Dashboard:
-  ```bash
-  streamlit run app.py
-  ```
+   ```bash
+   streamlit run app.py
+   ```
 
 ### 💡 The Big Picture (Future Scaling)
 
@@ -65,4 +66,8 @@ If this were expanded for a massive company, the tools would grow into:
 * **Kafka:** To handle millions of clicks at once without crashing.
 * **Redis:** For instant, split-second user recognition.
 * **Snowflake:**: For storing years of historical data for deep analysis.
+
+### 📊 The Intelligence (Dashboard)
+
+![Bond Engine Dashboard](assets/dashboard-demo.png)
    
