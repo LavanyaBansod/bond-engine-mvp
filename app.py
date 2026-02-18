@@ -10,37 +10,6 @@ BASE_URL = "http://127.0.0.1:8000"
 st.title("🦋 The Butterfly Tracker")
 st.subheader("Simulate User Interactions")
 
-# 1. Input for Anonymous ID
-anon_id = st.text_input("Device ID (Cookie)", value="cookie_999")
-
-# 2. Buttons to simulate 'Actions'
-st.write("Click a button to perform an action:")
-col1, col2, col3 = st.columns(3)
-
-if col1.button("View Product"):
-    res = requests.post(f"{BASE_URL}/capture", json={"anon_id": anon_id, "action": "view_product"})
-    st.success("Action Logged!")
-
-if col2.button("Add to Cart"):
-    res = requests.post(f"{BASE_URL}/capture", json={"anon_id": anon_id, "action": "add_to_cart"})
-    st.success("Action Logged!")
-
-# 3. The 'Stitch' Area (Login)
-st.divider()
-st.subheader("👤 Create a Bond (Login)")
-email = st.text_input("Enter Email to Login")
-
-if st.button("Log In & Stitch"):
-    if email:
-        # This calls the 'stitch' endpoint we made in server.py
-        res = requests.post(f"{BASE_URL}/stitch?anon_id={anon_id}&email={email}")
-        data = res.json()
-        st.write(f"Status: {data['status']}")
-        st.info(f"Bonded {data['interactions_found']} past actions to {email}")
-    else:
-        st.warning("Please enter an email!")
-
-st.divider()
 st.subheader("📊 Live Sniper Feed")
 
 # 1. This function reads the database and turns it into a table

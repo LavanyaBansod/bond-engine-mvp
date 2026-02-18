@@ -11,6 +11,7 @@ env/
 # Databases (We don't upload the actual data, just the code!)
 *.db
 *.sqlite3
+*.sqbpro
 
 # OS stuff
 .DS_Store
